@@ -56,7 +56,31 @@ namespace Samlingsklasser
         }
         static void Övning2()
         {
+            //En Övning2 lista med double som värde
+            List<double> övning2 = new List<double>();
 
+            //En for metod som gör att programmet upprepas
+            for (int i = 0; i < 1000000000; i++)
+            {
+                //Säger till användaren att lägga/mata in ett tal
+                Console.Write("Mata in ett tal:");
+                //Omvandlar talet som användaren mata in från string till double
+                double tal = double.Parse(Console.ReadLine());
+                //använder if för att det ska hända något annat om användaren matar in talet 0 
+                if (tal == 0)
+                {
+                    //Detta gör så att man går ut ur programmet om man matar in talet 0
+                    Environment.Exit(1);
+                }
+                //Om man skriver andra tal än 0 så körs else
+                else
+                {
+                    //Detta gör så att talet som matas in läggs till i en rad på listan på programmet
+                    övning2.Add(tal);
+                    //Detta skriver ut svaret Medelvärde i programmet.Denna rad skriver ut svaret av själva programmet. Det ska helt enkelt skriva ut vad medelvärdet av det skrivna talet är i programmet. 
+                    Console.WriteLine("Medelvärde:" + övning2.Average());
+                }
+            }
         }
         static void DictionaryExempel()
         {
@@ -108,6 +132,10 @@ namespace Samlingsklasser
             }
         }
 
+        static void DiceDictionary()
+        {
+
+        }
         static void QueueExempel()
         {
                 Queue<string> nummer = new Queue<string>();
